@@ -6,3 +6,30 @@
   --color-dark-blue: #293356;
   --color-light-blue: #848ead;
 }
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: hsl(174, 86%, 45%);
+  cursor: pointer;
+
+  background-image: url("icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background-color: hsl(174, 77%, 40%);
+}
+
+.slider::-moz-range-thumb {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0;
+  border-radius: 9999px;
+  background: hsl(174, 86%, 45%);
+  cursor: pointer;
+}

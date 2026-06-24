@@ -28,30 +28,50 @@
         /></span>
         pricing
       </h1>
-      <p class="text-center text-lg font-semibold text-light-blue mb-22">
+      <p class="text-center text-lg font-semibold text-light-blue mb-12">
         Sign-up for our 30-day trial. No credit card required.
       </p>
-      <div class="pricing-card">
-        <div class="pricing-card__header">
-          <div class="pricing-card__top">
-            <span class="pageviews">100K PAGEVIEWS</span>
+      <div
+        class="pricing-card w-135 h-100 bg-white p-8 flex flex-col justify-center items-center gap-4 shadow-2xl"
+      >
+        <div class="flex flex-col gap-8 pricing-card__header w-full">
+          <div
+            class="pricing-card__top flex justify-between w-full items-center"
+          >
+            <span
+              class="pageviews text-light-blue text-xl tracking-widest font-bold"
+              >100K PAGEVIEWS</span
+            >
 
             <div class="price">
-              <span class="price__amount">$16.00</span>
-              <span class="price__period">/ month</span>
+              <span
+                class="price__amount text-4xl text-dark-blue tracking-tighter font-bold"
+                >$16.00</span
+              >
+              <span class="price__period text-light-blue text-xl">/ month</span>
             </div>
           </div>
 
           <div class="slider-wrapper">
-            <input type="range" min="0" max="100" value="50" />
+            <input
+              id="slider"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              class="slider w-full h-2 appearance-none rounded-full bg-slate-200 [&::-webkit-slider-thumb]:shadow-[0_15px_30px_rgba(16,213,194,0.7)]"
+            />
           </div>
 
-          <div class="billing-toggle">
+          <div class="billing-toggle flex justify-end items-center gap-4">
             <span>Monthly Billing</span>
 
-            <label class="switch">
-              <input type="checkbox" />
-              <span></span>
+            <label class="relative inline-block w-11 h-6 cursor-pointer">
+              <input type="checkbox" class="peer sr-only" />
+
+              <span
+                class="absolute inset-0 rounded-full transition peer-checked:bg-[#10D5C2] bg-[#CFD8F6] before:content-[''] before:absolute before:w-4 before:h-4 before:bg-white before:rounded-full before:left-1 before:top-1 before:transition-transform peer-checked:before:translate-x-5"
+              ></span>
             </label>
 
             <span>Yearly Billing</span>
