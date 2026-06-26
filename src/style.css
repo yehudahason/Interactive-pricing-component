@@ -5,6 +5,10 @@
   --font-sans: "Manrope", sans-serif;
   --color-dark-blue: #293356;
   --color-light-blue: #848ead;
+  --color-light-gray: #ebebeb;
+  --color-med-orange: #ff8d68;
+  --color-light-orange: #feede8;
+  --breakpoint-small: 350px;
 }
 
 .slider::-webkit-slider-thumb {
@@ -16,13 +20,13 @@
   background: hsl(174, 86%, 45%);
   cursor: pointer;
 
-  background-image: url("icon-slider.svg");
+  background-image: url("/images/icon-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.slider::-webkit-slider-thumb:hover {
-  background-color: hsl(174, 77%, 40%);
+.slider::-webkit-slider-thumb:hover,
+.slider::-webkit-slider-thumb:active {
+  background-color: hsl(174, 70%, 60%);
 }
 
 .slider::-moz-range-thumb {
@@ -31,5 +35,12 @@
   border: 0;
   border-radius: 9999px;
   background: hsl(174, 86%, 45%);
+  background-image: url("/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
+}
+.slider::-moz-range-thumb:hover,
+.slider::-moz-range-thumb:active {
+  background-color: hsl(174, 70%, 60%);
 }

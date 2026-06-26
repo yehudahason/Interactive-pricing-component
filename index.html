@@ -32,23 +32,27 @@
         Sign-up for our 30-day trial. No credit card required.
       </p>
       <div
-        class="pricing-card w-135 h-100 bg-white p-8 flex flex-col justify-center items-center gap-4 shadow-2xl"
+        class="pricing-card w-full sm:w-135 sm:h-100 h-fit bg-white sm:p-8 px-2 py-4 flex flex-col justify-center items-center gap-4 shadow-2xl rounded-xl"
       >
         <div class="flex flex-col gap-8 pricing-card__header w-full">
           <div
             class="pricing-card__top flex justify-between w-full items-center"
           >
             <span
-              class="pageviews text-light-blue text-xl tracking-widest font-bold"
+              id="pageviews"
+              class="pageviews text-light-blue sm:text-xl tracking-widest font-bold"
               >100K PAGEVIEWS</span
             >
 
             <div class="price">
               <span
-                class="price__amount text-4xl text-dark-blue tracking-tighter font-bold"
+                id="price_amount"
+                class="price__amount sm:text-4xl text-dark-blue tracking-tighter font-bold"
                 >$16.00</span
               >
-              <span class="price__period text-light-blue text-xl">/ month</span>
+              <span class="price__period text-light-blue sm:text-xl"
+                >/ month</span
+              >
             </div>
           </div>
 
@@ -57,37 +61,66 @@
               id="slider"
               type="range"
               min="0"
-              max="100"
+              max="4"
               value="50"
+              step="1"
               class="slider w-full h-2 appearance-none rounded-full bg-slate-200 [&::-webkit-slider-thumb]:shadow-[0_15px_30px_rgba(16,213,194,0.7)]"
             />
           </div>
 
-          <div class="billing-toggle flex justify-end items-center gap-4">
-            <span>Monthly Billing</span>
+          <div
+            class="billing-toggle flex justify-end items-center sm:gap-6 gap-3"
+          >
+            <span
+              class="text-light-blue small:text-sm text-[0.7rem] font-semibold"
+              >Monthly Billing</span
+            >
 
-            <label class="relative inline-block w-11 h-6 cursor-pointer">
-              <input type="checkbox" class="peer sr-only" />
+            <label class="relative inline-block w-9 h-5 cursor-pointer">
+              <input id="checkbox" type="checkbox" class="peer sr-only" />
 
               <span
-                class="absolute inset-0 rounded-full transition peer-checked:bg-[#10D5C2] bg-[#CFD8F6] before:content-[''] before:absolute before:w-4 before:h-4 before:bg-white before:rounded-full before:left-1 before:top-1 before:transition-transform peer-checked:before:translate-x-5"
-              ></span>
+                class="absolute inset-0 rounded-full transition peer-checked:bg-[#10D5C2] bg-[#CFD8F6] before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:left-1 before:top-1 before:transition-transform peer-checked:before:translate-x-4 peer-focus:ring-2 peer-focus:ring-blue-500 peer-focus:ring-offset-2"
+              >
+              </span>
             </label>
 
-            <span>Yearly Billing</span>
+            <span
+              class="text-light-blue font-semibold inline-block small:text-sm text-[0.7rem] sm:text-[0.8rem]"
+              >Yearly Billing</span
+            >
 
-            <span class="discount">25% discount</span>
+            <span
+              class="discount bg-light-orange text-med-orange sm:px-2 py-0 rounded-4xl font-semibold small:text-[0.8rem] sm:text-[0.8rem] gap-1 flex-1 text-[0.7rem] small:max-w-[6.5rem] text-center"
+              >25% discount</span
+            >
           </div>
         </div>
-
-        <div class="pricing-card__footer">
-          <ul class="features">
-            <li>Unlimited websites</li>
-            <li>100% data ownership</li>
-            <li>Email reports</li>
+        <hr class="sm:w-[113%] h-px w-[104%] mt-6 border-light-gray" />
+        <div
+          class="mt-8 pricing-card__footer flex justify-between items-center w-full"
+        >
+          <ul class="features text-sm text-light-blue font-semibold">
+            <li class="flex items-center gap-2">
+              <img class="w-2 h-3" src="/images/icon-check.svg" alt="" />
+              Unlimited websites
+            </li>
+            <li class="flex items-center gap-2">
+              <img class="w-2 h-3" src="/images/icon-check.svg" alt="" />100%
+              data ownership
+            </li>
+            <li class="flex items-center gap-2">
+              <img class="w-2 h-3" src="/images/icon-check.svg" alt="" />Email
+              reports
+            </li>
           </ul>
 
-          <button type="button">Start my trial</button>
+          <button
+            type="button"
+            class="bg-blue-950 cursor-pointer hover:opacity-90 rounded-full text-white text-sm py-2 font-semibold sm:px-6 px-3"
+          >
+            Start my trial
+          </button>
         </div>
       </div>
     </main>
