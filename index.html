@@ -5,8 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/Interactive-pricing-component/images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>interactive-pricing-component</title>
-    <script type="module" crossorigin src="/Interactive-pricing-component/assets/index-3aXIM_8K.js"></script>
-    <link rel="stylesheet" crossorigin href="/Interactive-pricing-component/assets/index-DIwNnnVx.css">
+    <script type="module" crossorigin src="/Interactive-pricing-component/assets/index-DQDA8G8o.js"></script>
+    <link rel="stylesheet" crossorigin href="/Interactive-pricing-component/assets/index-CvRNwe_z.css">
   </head>
   <body>
     <main
@@ -40,6 +40,7 @@
             class="pricing-card__top flex justify-between w-full items-center"
           >
             <span
+              id="pageviews"
               class="pageviews text-light-blue sm:text-xl tracking-widest font-bold"
               >100K PAGEVIEWS</span
             >
@@ -61,9 +62,9 @@
               id="slider"
               type="range"
               min="0"
-              max="100"
+              max="4"
               value="50"
-              step="25"
+              step="1"
               class="slider w-full h-2 appearance-none rounded-full bg-slate-200 [&::-webkit-slider-thumb]:shadow-[0_15px_30px_rgba(16,213,194,0.7)]"
             />
           </div>
@@ -77,7 +78,7 @@
             >
 
             <label class="relative inline-block w-9 h-5 cursor-pointer">
-              <input type="checkbox" class="peer sr-only" />
+              <input id="checkbox" type="checkbox" class="peer sr-only" />
 
               <span
                 class="absolute inset-0 rounded-full transition peer-checked:bg-[#10D5C2] bg-[#CFD8F6] before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:left-1 before:top-1 before:transition-transform peer-checked:before:translate-x-4 peer-focus:ring-2 peer-focus:ring-blue-500 peer-focus:ring-offset-2"
@@ -96,7 +97,7 @@
             >
           </div>
         </div>
-        <hr />
+        <hr class="sm:w-[113%] h-px w-[104%] mt-6 border-light-gray" />
         <div
           class="mt-8 pricing-card__footer flex justify-between items-center w-full"
         >
@@ -117,7 +118,7 @@
 
           <button
             type="button"
-            class="bg-blue-950 cursor-pointer hover:opacity-90 rounded-full text-white py-2 font-semibold sm:px-6 px-3"
+            class="bg-blue-950 cursor-pointer hover:opacity-90 rounded-full text-white text-sm py-2 font-semibold sm:px-6 px-3"
           >
             Start my trial
           </button>
