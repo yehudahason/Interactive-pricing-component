@@ -69,18 +69,21 @@
           </div>
 
           <div
-            class="billing-toggle flex justify-end items-center sm:gap-6 gap-3"
+            class="billing-toggle flex sm:justify-end justify-center items-center sm:gap-6 gap-3"
           >
             <span
               class="text-light-blue small:text-sm text-[0.7rem] font-semibold"
               >Monthly Billing</span
             >
 
-            <label class="relative inline-block w-9 h-5 cursor-pointer">
+            <label
+              aria-label="choose period"
+              class="relative inline-block w-9 h-5 cursor-pointer"
+            >
               <input id="checkbox" type="checkbox" class="peer sr-only" />
 
               <span
-                class="absolute inset-0 rounded-full transition peer-checked:bg-[#10D5C2] bg-[#CFD8F6] before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:left-1 before:top-1 before:transition-transform peer-checked:before:translate-x-4 peer-focus:ring-2 peer-focus:ring-blue-500 peer-focus:ring-offset-2"
+                class="absolute inset-0 rounded-full hover:bg-[#10D5C2] transition peer-checked:bg-[#10D5C2] bg-[#CFD8F6] before:content-[''] before:absolute before:w-3 before:h-3 before:bg-white before:rounded-full before:left-1 before:top-1 before:transition-transform peer-checked:before:translate-x-4 peer-focus:ring-2 peer-focus:ring-blue-500 peer-focus:ring-offset-2"
               >
               </span>
             </label>
@@ -91,7 +94,7 @@
             >
 
             <span
-              class="discount bg-light-orange text-med-orange sm:px-2 py-0 rounded-4xl font-semibold small:text-[0.8rem] sm:text-[0.8rem] gap-1 flex-1 text-[0.7rem] small:max-w-[6.5rem] text-center"
+              class="discount bg-light-orange text-med-orange sm:px-2 py-0 rounded-4xl font-semibold small:text-[0.8rem] sm:text-[0.8rem] gap-1 flex-1 text-[0.7rem] small:max-w-26 text-center"
               >25% discount</span
             >
           </div>
@@ -100,7 +103,10 @@
         <div
           class="mt-8 pricing-card__footer flex justify-between items-center w-full"
         >
-          <ul class="features text-sm text-light-blue font-semibold">
+          <ul
+            class="features text-sm text-light-blue font-semibold"
+            aria-label="Why to choose us"
+          >
             <li class="flex items-center gap-2">
               <img class="w-2 h-3" src="/images/icon-check.svg" alt="" />
               Unlimited websites

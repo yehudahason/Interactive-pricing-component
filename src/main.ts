@@ -3,7 +3,7 @@ const price_amount = document.getElementById(
   "price_amount",
 ) as HTMLElement | null;
 
-const checkbox = document.getElementById("checkbox") as HTMLInputElement;
+const checkboxEl = document.getElementById("checkbox") as HTMLInputElement;
 const pageviewsEl = document.getElementById("pageviews") as HTMLElement;
 
 const monthlyValues = [4, 8, 16, 24, 36];
@@ -19,7 +19,7 @@ function updateSlider() {
   const value = Number(slider.value);
 
   const percent = ((value - min) / (max - min)) * 100;
-  const arr = checkbox.checked ? yearlyValues : monthlyValues;
+  const arr = checkboxEl.checked ? yearlyValues : monthlyValues;
   const price = arr[value];
   const views = pageviews[value];
   pageviewsEl.innerHTML = views + " PAGEVIEWS";
@@ -41,5 +41,5 @@ if (slider) {
   updateSlider();
 
   slider.addEventListener("input", updateSlider);
-  checkbox.addEventListener("change", updateSlider);
+  checkboxEl.addEventListener("change", updateSlider);
 }
