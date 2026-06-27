@@ -43,5 +43,5 @@ if (slider) {
   updateSlider();
 
   slider.addEventListener("input", updateSlider);
-  checkboxEl.addEventListener("change", updateSlider);
+  checkboxEl?.addEventListener("change", updateSlider);
 }
