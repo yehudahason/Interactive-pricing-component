@@ -3,23 +3,25 @@ const price_amount = document.getElementById(
   "price_amount",
 ) as HTMLElement | null;
 
-const checkboxEl = document.getElementById("checkbox") as HTMLInputElement;
-const pageviewsEl = document.getElementById("pageviews") as HTMLElement;
+const checkboxEl = document.getElementById(
+  "checkbox",
+) as HTMLInputElement | null;
+const pageviewsEl = document.getElementById("pageviews") as HTMLElement | null;
 
 const monthlyValues = [4, 8, 16, 24, 36];
-const yearlyValues = [3, 6, 12, 22, 30];
+const yearlyValues = [3, 6, 12, 18, 27];
 const pageviews = ["10K", "50K", "100K", "500K", "1M"];
 
 function updateSlider() {
   if (!slider) return;
-  if (!pageviews) return;
+  if (!pageviewsEl) return;
 
   const min = Number(slider.min);
   const max = Number(slider.max);
   const value = Number(slider.value);
 
   const percent = ((value - min) / (max - min)) * 100;
-  const arr = checkboxEl.checked ? yearlyValues : monthlyValues;
+  const arr = checkboxEl?.checked ? yearlyValues : monthlyValues;
   const price = arr[value];
   const views = pageviews[value];
   pageviewsEl.innerHTML = views + " PAGEVIEWS";
