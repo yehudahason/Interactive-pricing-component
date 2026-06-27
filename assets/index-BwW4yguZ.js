@@ -1,7 +1,0 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=document.getElementById(`slider`),t=document.getElementById(`price_amount`),n=document.getElementById(`checkbox`),r=document.getElementById(`pageviews`),i=[4,8,16,24,36],a=[3,6,12,22,30],o=[`10K`,`50K`,`100K`,`500K`,`1M`];function s(){if(!e||!o)return;let s=Number(e.min),c=Number(e.max),l=Number(e.value),u=(l-s)/(c-s)*100,d=(n.checked?a:i)[l];r.innerHTML=o[l]+` PAGEVIEWS`,t&&(t.textContent=`$${d}`),e.style.background=`linear-gradient(
-    to right,
-    hsl(174, 77%, 80%) 0%,
-    hsl(174, 77%, 80%) ${u}%,
-    hsl(224, 65%, 95%) ${u}%,
-    hsl(224, 65%, 95%) 100%
-  )`}e&&(s(),e.addEventListener(`input`,s),n.addEventListener(`change`,s));
